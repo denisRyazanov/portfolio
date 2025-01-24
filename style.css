@@ -11,6 +11,6 @@
     color: azure;
 }
 
-.header-nav {
+.header-nav ul {
     display: flex;
 }
