@@ -1,3 +1,8 @@
+body a {
+    text-decoration: none;
+}
+
+
 .page {
     display: flex;
     flex-direction: column;
@@ -5,12 +10,15 @@
 
 .header {
     padding: 20px 10px;
-    background: grey;
+    background: rgb(180, 179, 179);
     display: flex;
     justify-content: space-between;
-    color: azure;
 }
 
 .header-nav ul {
     display: flex;
+}
+
+.list-item {
+    color: azure;
 }
