@@ -4,8 +4,10 @@
 }
 
 .header {
+    background: grey;
     display: flex;
     justify-content: space-between;
+    color: azure;
 }
 
 .header-nav {
