@@ -34,16 +34,26 @@ body a {
     text-decoration: none;
 }
 
+body p {
+    font-size: 20px;
+}
+
 .page {
     display: flex;
     flex-direction: column;
 }
 
 .header {
-    padding: 20px 10px;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 999;
+    padding: 20px 5px;
     background: rgb(109, 107, 107);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .logo a, .header-nav a{
@@ -60,7 +70,23 @@ body a {
     gap: 1rem;
 }
 
+
 .social-links a {
     font-size: 24px;
     color: azure;
+}
+
+.main-content {
+    padding-top: 60px;
+    min-height: 100vh;
+    background: url(./img/background.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 48px;
+    margin: 20px 0;
 }
