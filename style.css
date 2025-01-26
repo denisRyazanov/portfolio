@@ -105,16 +105,25 @@ body p {
     transition: all .4s;
 }
 
+.wrapper-orange {
+    padding: 60px 0;
+    background: orange;
+}
+
+.wrapper-light {
+    background: azure;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
-    padding-top: 80px;
+    /* padding-top: 80px; */
     min-height: 100vh;
-    background: rgba(255, 166, 0, 0.516) ;
+    /* background: rgba(255, 166, 0, 0.516) ; */
   
     /* background: url(./img/background.jpg); */
-    background-size: cover;
+    /* background-size: cover; */
     text-align: center;
 }
 
