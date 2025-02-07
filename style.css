@@ -107,7 +107,8 @@ body p {
 
 .wrapper-orange {
     padding: 60px 0;
-    background: orange;
+    color: orange;
+    /* background: orange; */
 }
 
 .wrapper-light {
@@ -118,12 +119,12 @@ body p {
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
-    /* padding-top: 80px; */
+    padding-top: 80px;
     min-height: 100vh;
     /* background: rgba(255, 166, 0, 0.516) ; */
   
-    /* background: url(./img/background.jpg); */
-    /* background-size: cover; */
+    background: url(./img/background_2.jpg);
+    background-size: cover;
     text-align: center;
 }
 
