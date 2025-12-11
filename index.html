@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umělecký kovář</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png" type="image/png">
+<script src="https://www.google.com/recaptcha/api.js?render=RECAPTCHA_SITE_KEY"></script>
+<script>function onSubmit(token){document.getElementById("contact-form").submit();}</script>
+</head>
+<body>
+<header><h1 class="fade-in">Umělecký kovář</h1><p class="fade-in delay-1">Kované brány – zábradlí – dekorace – umělecké kusy</p></header>
+<section class="slider"><div class="slides">
+<img src="img/slider1.jpg" class="slide">
+<img src="img/slider2.jpg" class="slide">
+<img src="img/slider3.jpg" class="slide">
+</div></section>
+<section class="gallery-section"><h2>Galerie prací</h2><div class="gallery">
+<img src="img/work1.jpg" onclick="openLightbox(this.src)">
+<img src="img/work2.jpg" onclick="openLightbox(this.src)">
+<img src="img/work3.jpg" onclick="openLightbox(this.src)">
+<img src="img/work4.jpg" onclick="openLightbox(this.src)">
+<img src="img/work5.jpg" onclick="openLightbox(this.src)">
+<img src="img/work6.jpg" onclick="openLightbox(this.src)">
+</div></section>
+<div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img"></div>
+<section class="contact-section"><h2>Kontaktujte mě</h2>
+<form id="contact-form" action="send.php" method="POST" enctype="multipart/form-data">
+<input type="text" name="name" placeholder="Vaše jméno" required>
+<input type="email" name="email" placeholder="E-mail" required>
+<input type="text" name="phone" placeholder="Telefon" required>
+<textarea name="message" placeholder="Vaše zpráva" required></textarea>
+<label>Přiložit soubor:</label><input type="file" name="attachment">
+<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+<button type="submit">Odeslat zprávu</button>
+</form></section>
+<section class="map-section"><h2>Kde mě najdete</h2>
+<iframe src="https://www.google.com/maps?q=Pod%20D%C3%A1lnic%C3%AD,%20267%2001%20Kr%C3%A1l%C5%AFv%20Dv%C5%AFr&output=embed" loading="lazy"></iframe>
+</section>
+<script>
+function openLightbox(src){document.getElementById("lightbox-img").src=src;document.getElementById("lightbox").style.display="flex";}
+let slideIndex=0;const slides=document.querySelectorAll(".slide");
+function showSlides(){slides.forEach(s=>s.style.opacity="0");slideIndex=(slideIndex+1)%slides.length;slides[slideIndex].style.opacity="1";setTimeout(showSlides,4000);}showSlides();
+grecaptcha.ready(()=>{grecaptcha.execute('RECAPTCHA_SITE_KEY',{action:'submit'}).then(token=>{document.getElementById('recaptchaResponse').value=token;});});
+</script>
+</body></html>
